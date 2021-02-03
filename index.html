@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Mi Portafolio</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+    <div class="container">
+        <header>
+            <img src="./images/Profile.jpg" alt="Jorge Luis Jaime Sanchez" class="header-img"></img>
+            <h1 class="header">Jorge Luis Jaime Sánchez</h1>
+            <h2 class="subtitle">Full Stack Developer</h2>
+            <nav>
+                <ul class="navigation">
+                    <li class="nav-item"><a href="#acerda-de">Acerca de</a></li>
+                    <li class="nav-item">
+                        <a href="#proyectos">Mis Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <section>
+                <h2 class="header" id="acerda-de">Acerca de</h2>
+                <p class="intro">
+                    Hola! Soy Jorge 👋 y te doy la bienvenida a mi sitio web personal, soy un apasionado por la programación, diseño web y la tecnolog&iacute;a en general. Despu&eacute;s de estudiar ingenier&iacute;a industrial en la universidad, trabaj&eacute; como consultor
+                    por un año y emprendi varios negocios relacionados con la tecnolog&iacute;a hasta que aprendí a programar y mi mundo cambio. Para backend mi primer lenguaje y de mis favoritos es PHP. En los ultimos dos años me he enfocado en el frontend
+                    (HTML CSS JS), específicamente en JavaScript.</p>
+                <ul class="social-media">
+                    <li>
+                        <a href="https://twitter.com/trakadev" target="_blank"><img src="images/twitter.png" alt="Twitter" />
+                            <p class="social-link-text">Twitter</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Traka-Dev" target="_blank"><img src="images/github-logo.png" alt="GitHub" />
+                            <p class="social-link-text">GitHub</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/jorge-luis-jaime-sanchez-6a136a75/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" />
+                            <p class="social-link-text">LinkedIn</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="portafolio">
+                <h2 class="header" id="proyectos">Mis Proyectos</h2>
+                <div class="layout">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide swiper-slide--1">
+                                <a href="#" target="_blank"><img src="./images/MarketPlace.png" alt="Proyecto MarketPlace"></a>
+                            </div>
+                            <div class="swiper-slide swiper-slide--2">
+                                <a href="#" target="_blank"><img src="./images/Agencia_Digital.png" alt="Proyecto MarketPlace"></a>
+                            </div>
+                            <div class="swiper-slide swiper-slide--3">
+                                <a href="#" target="_blank"><img src="./images/inventario.png" alt="Proyecto MarketPlace"></a>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="contact-section" id="contacto">
+            <h2 class="header">Contacto</h2>
+            <p class="intro">Para manderme un mensaje puedes usar el formulario que sigue</p>
+            <form class="form-container" method="POST">
+                <label class="form-label">Nombre</label><input type="text" aria-label="nombre" id="name" />
+                <span id="name-error" class="error-form" aria-live="assertive"></span>
+                <br />
+                <label class="form-label">Correo</label><input type="text" aria-label="correo" id="email" />
+                <span id="email-error" class="error-form" aria-live="assertive"></span>
+                <br />
+                <label class="message-input">Mensaje<input type="text"  id="message"/> <br /></label>
+                <button class="send-button">Enviar</button>
+            </form>
+        </footer>
+    </div>
+    <div class="notification" aria-live="assertive"></div>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</body>
+
+</html>
