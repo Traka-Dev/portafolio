@@ -1,27 +1,6 @@
-window.onload = () => {
-    mySwiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: false,
-
-        //pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // Navigation 
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-    })
-};
-
+function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
 /** Validar el formulario antes de mostrar la notificacion */
 function validateForm(e) {
     e.preventDefault();
@@ -48,8 +27,7 @@ function showNotification() {
     document.getElementById("email-error").innerHTML = "";
     nombre = document.getElementById("name").value;
     correo = document.getElementById("email").value;
-    mensaje = document.getElementById("message").value;
-    console.log(correo);
+    mensaje = escapeRegExp(document.getElementById("message").value);
 
     //Exito 
     jQuery.ajax({

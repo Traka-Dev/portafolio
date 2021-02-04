@@ -11,7 +11,7 @@ function clean_string($string)
         $email_subject = "Contacto ".$_POST['Name'];        
         $name = $_POST['Name']; // required
         $email = $_POST['Email']; // required
-        $message = $_POST['Message']; // required
+        $message = $_POST['Message'];
     
         $error_message = "";
         $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';

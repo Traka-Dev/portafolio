@@ -18,12 +18,12 @@
             <h2 class="subtitle">Full Stack Developer</h2>
             <nav>
                 <ul class="navigation">
-                    <li class="nav-item"><a href="#acerda-de">Acerca de</a></li>
+                    <li class="nav-item"><a href="#acerda-de">&lt;Acerca de/&gt;</a></li>
                     <li class="nav-item">
-                        <a href="#proyectos">Mis Proyectos</a>
+                        <a href="#projects">&lt;Mis Proyectos/&gt;</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contacto">Contacto</a>
+                        <a href="#contacto">&lt;Contacto/&gt;</a>
                     </li>
                 </ul>
             </nav>
@@ -53,35 +53,23 @@
                     </li>
                 </ul>
             </section>
-            <section class="portafolio">
-                <h2 class="header" id="proyectos">Mis Proyectos</h2>
-                <div class="layout">
-                    <!-- Slider main container -->
-                    <div class="swiper-container">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide swiper-slide--1">
-                                <a href="#" target="_blank"><img src="./images/MarketPlace.png" alt="Proyecto MarketPlace"></a>
-                            </div>
-                            <div class="swiper-slide swiper-slide--2">
-                                <a href="#" target="_blank"><img src="./images/Agencia_Digital.png" alt="Proyecto MarketPlace"></a>
-                            </div>
-                            <div class="swiper-slide swiper-slide--3">
-                                <a href="#" target="_blank"><img src="./images/inventario.png" alt="Proyecto MarketPlace"></a>
-                            </div>
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-
-                        <!-- If we need scrollbar -->
-                        <div class="swiper-scrollbar"></div>
-                    </div>
-                </div>
+            <section class="portafolio" id="projects">
+                <h2 class="header porfolio__header">Mis Últimos Proyectos</h2>
+                <article class="project proyect1">
+                    <img src="./images/MarketPlace.png" alt="Proyecto MarketPlace">
+                    <h3 class="project-details" class="proyect-title">MarketPlace<br/><a href="#">M&aacute;s detalles</a></h3>
+                    <a class="project-link" href="https://sinaloamarket.com" target="_blank" rel="nofollow">&lt;Sitio Web/&gt;</a>
+                </article>
+                <article class="project proyect1">
+                    <img src="./images/Agencia_Digital.png" alt="Proyecto Agencia Digital">
+                    <h3 class="project-details" class="proyect-title">Agencia Digital<br/><a href="#">M&aacute;s detalles</a></h3>
+                    <a class="project-link" href="https://ingeniodigitalmexico.com" target="_blank" rel="nofollow">&lt;Sitio Web/&gt;</a>
+                </article>
+                <article class="project proyect1">
+                    <img src="./images/inventario.png" alt="Project Inventory">
+                    <h3 class="project-details">Inventario<br/><a href="#">M&aacute;s detalles</a></h3>
+                    <a class="project-link" href="#" target="_blank" rel="nofollow">&lt;Sitio Web/&gt;</a>
+                </article>
             </section>
         </main>
         <footer class="contact-section" id="contacto">
@@ -94,16 +82,13 @@
                 <label class="form-label">Correo</label><input type="text" aria-label="correo" id="email" />
                 <span id="email-error" class="error-form" aria-live="assertive"></span>
                 <br />
-                <label class="message-input">Mensaje<input type="text"  id="message"/> <br /></label>
+                <label class="message-input">Mensaje <br /></label>
+                <textarea id="message" rows="4" cols="50"></textarea>
                 <button class="send-button">Enviar</button>
             </form>
         </footer>
     </div>
     <div class="notification" aria-live="assertive"></div>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="index.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </body>

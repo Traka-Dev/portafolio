@@ -1,5 +1,3 @@
-/* css reset */
-
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -39,7 +37,7 @@ img {
 
 /*--- end of reset ----*/
 
-:root {
+ :root {
     --blanco: white;
     --gris-medio: #333333;
     --gris-oscuro: #1e1e1e;
@@ -119,17 +117,21 @@ nav {
 }
 
 .nav-item:hover,
-.nav-item:hover a {
+.nav-item:hover a,
+.project-link:hover,
+.project-link:hover a {
     background-color: var(--verde);
     color: var(--gris-oscuro);
     cursor: pointer;
 }
 
-.nav-item:focus-within {
+.nav-item:focus-within,
+.project-link:focus-within {
     background-color: var(--verde);
 }
 
-.nav-item a:focus {
+.nav-item a:focus,
+.project-link a:focus {
     outline: none;
     color: var(--gris-oscuro);
 }
@@ -144,7 +146,8 @@ nav {
     width: 33%;
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.project-link:hover {
     background-color: var(--verde);
 }
 
@@ -185,78 +188,10 @@ nav {
     padding-right: 8px;
 }
 
-.carousel {
-    align-items: center;
-    display: flex;
-    margin: 48px 0 64px;
-}
-
 .window {
     overflow: hidden;
     width: 815px;
     padding: 8px;
-}
-
-.project-container {
-    left: 0;
-    position: relative;
-    width: 1500px;
-}
-
-.project-container li {
-    display: inline-block;
-}
-
-.project-container button {
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-.project-container button:focus-within {
-    outline: 3px solid var(--verde);
-}
-
-.project-img {
-    border-radius: 5px;
-    border: 2px solid #000;
-    display: inline-block;
-    height: 400px;
-    margin: 0 8px;
-    transition: all 0.2s ease-in-out;
-    width: 250px;
-    object-fit: cover;
-}
-
-.project:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.arrow {
-    height: 75px;
-    transition: all 0.2s ease-in-out;
-    width: 75px;
-}
-
-.arrow:hover {
-    transform: scale(1.1);
-}
-
-.arrow-left {
-    background: center / contain no-repeat url(./images/play-button-left.png);
-    background-color: var(--verde);
-    border-radius: 50%;
-}
-
-.arrow-right {
-    background: center / contain no-repeat url(./images/play-button-right.png);
-    background-color: var(--verde);
-    border-radius: 50%;
-}
-
-.arrow:focus {
-    outline: 3px solid var(--verde);
 }
 
 .contact-section {
@@ -270,7 +205,7 @@ nav {
 .form-container {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 60%;
 }
 
 .form-label,
@@ -286,15 +221,16 @@ nav {
 
 input {
     width: 100%;
+    height: 40px;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
     outline: 3px solid var(--verde);
     padding: 8px;
 }
 
-.send-button,
-.modal-button {
+.send-button {
     align-items: center;
     background-color: var(--verde);
     border-radius: 5px;
@@ -310,8 +246,7 @@ input:focus {
     cursor: pointer;
 }
 
-.send-button:focus,
-.modal-button:focus {
+.send-button:focus {
     border: 5px solid var(--gris-oscuro);
     outline: 3px solid var(--verde);
 }
@@ -336,64 +271,53 @@ input:focus {
     width: 300px;
 }
 
-.modal-container {
-    align-items: center;
-    background-color: rgba(000, 000, 000, 0.2);
-    display: none;
-    height: 100vh;
-    justify-content: center;
-    position: fixed;
-    width: 100vw;
-}
-
-.modal {
-    align-items: center;
-    background-color: var(--gris-oscuro);
-    border-radius: 5px;
-    border: 2px solid #000;
-    display: flex;
-    flex-direction: column;
-    height: 600px;
-    justify-content: center;
-    position: fixed;
-    top: 5%;
-    width: 700px;
-}
-
-.modal-project-image {
-    background: center / cover no-repeat url(./images/project1.png);
-    border-radius: 5px;
-    border: 2px solid #000;
-    height: 400px;
-    margin: 16px;
-    width: 550px;
-}
-
-.modal-project-url {
-    color: var(--blanco);
-}
-
-.layout {
+.portafolio {
     display: grid;
-    grid-template-columns: 1fr 30px repeat(4, 1fr 30px) 1fr;
+    grid-template-areas: "header header header" "project1 project2 project3";
+    gap: 10px;
+    padding: 5%;
 }
 
-.swiper-container {
-    grid-column: 3 / 10;
+.porfolio__header {
+    grid-area: header;
+    text-align: center;
+}
+
+.project img {
+    height: 40vh;
     width: 100%;
-    height: 50vh;
 }
 
-.swiper-slide {}
-
-.swiper-slide--1 {
-    background-color: yellow;
+.project h3 {
+    color: var(--blanco);
+    text-align: center;
 }
 
-.swiper-slide--2 {
-    background-color: orange;
+.project1 {
+    grid-area: projecto1;
 }
 
-.swiper-slide--3 {
-    background-color: red;
+.project2 {
+    grid-area: projecto2;
+}
+
+.proyecto3 {
+    grid-area: proyecto3;
+}
+
+.project-link {
+    text-decoration: none;
+    color: var(--blanco);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    border-radius: 5px;
+    font-family: var(--secondary-font);
+    height: 30px;
+    margin: 0 20% 0 20%;
 }
