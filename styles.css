@@ -83,7 +83,6 @@ section {
     color: var(--blanco);
     font-family: var(--main-font);
     font-size: 5.5rem;
-    /* margin-top: 16px; */
 }
 
 .subtitle {
@@ -291,7 +290,6 @@ textarea:focus {
     grid-template-areas: "header header header" "project1 project2 project3";
     gap: 20px;
     padding: 5%;
-    height: 100vh;
 }
 
 .porfolio__header {
@@ -337,6 +335,7 @@ textarea:focus {
 
 .project img {
     height: 40vh;
+    max-height: 350px;
     width: 100%;
 }
 
@@ -386,7 +385,7 @@ textarea:focus {
     text-align: center;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 800px) {
     .header {
         font-size: 3rem;
     }
@@ -435,9 +434,6 @@ textarea:focus {
     }
     .navigation {
         flex-wrap: wrap;
-    }
-    header {
-        height: 100vh;
     }
     .header {
         font-size: 3rem;
