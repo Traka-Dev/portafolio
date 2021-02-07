@@ -288,6 +288,7 @@ textarea:focus {
 
 .portafolio {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "header header header" "project1 project2 project3";
     gap: 20px;
     padding: 5%;
@@ -337,7 +338,7 @@ textarea:focus {
 .project img {
     height: 40vh;
     max-height: 350px;
-    width: 100%;
+    width: 100vw;
 }
 
 .project-overlay {
